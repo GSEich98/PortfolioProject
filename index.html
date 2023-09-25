@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSEich.dev</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="images/android-chrome-192x192.png">
+    <link rel="icon" href="images/android-chrome-512x512.png">
+    <link rel="icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Tektur&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b27b18b9da.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -55,13 +61,13 @@
             </ul>
         </div>
     </nav>
-    <header id="header-index" class="page">
+    <header id="header-index" class="page" transition-style="in:circle:center">
         <!-- Header with Name and Photo -->
         <div id="header-container">
             <h2 id="h2-top"><span id="h2-left">Software</span> <span id="h2-right">Developer</span></h2>
             <h1 id="h1-left">Graham</h1>
             <h1 id="h1-right">Eichstaedt</h1>
-            <!-- <img id="hero" src="images/GOLD4165.jpg" alt="Header Image" height="50%" width="50%"> -->
+            <!-- <img id="hero" src="images/GOLD4165.jpg" alt="Header Image"> -->
 
         </div>
     </header>
@@ -82,18 +88,20 @@
     <section id="skills">
         <!-- Skills -->
         <h2>Skills</h2>
-        <ul>
-            <li><span>Icon Placeholder</span>HTML</li>
-            <li><span>Icon Placeholder</span>CSS</li>
-            <li><span>Icon Placeholder</span>JavaScript</li>
-            <li><span>Icon Placeholder</span>GitBash | GitHub</li>
-        </ul>
-        <ul>
-            <li><span>Icon Placeholder</span>Java</li>
-            <li><span>Icon Placeholder</span>Python</li>
-            <li><span>Icon Placeholder</span>Kotlin</li>
-            <li><span>Icon Placeholder</span>MySQL</li>
-        </ul>
+        <div id="skills-lists">
+            <ul>
+                <li><i class="fa-brands fa-html5"></i>HTML</li>
+                <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+                <li><i class="fa-brands fa-square-js"></i>JavaScript</li>
+                <li><i class="fa-brands fa-git-alt"></i>GitBash | GitHub</li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-java"></i>Java</li>
+                <li><i class="fa-brands fa-python"></i>Python</li>
+                <li><i class="fa-brands fa-android"></i>Kotlin</li>
+                <li><i class="fa-solid fa-database"></i>MySQL</li>
+            </ul>
+        </div>
     </section>
     <section id="projects">
         <!-- Projects -->
@@ -102,20 +110,24 @@
         <img src="#" alt="Spotify Clone" title="Spotify Clone">
     </section>
     <section id="contact">
-        <!-- Contact -->
-        <div id="contact-area">
-            <h2>Contact Me</h2>
-            <p>I'm thrilled you're interested in reaching out! Whether you have a question, project proposal, or just want to say hello, feel free to to get in touch using this form or any other method listed below:</p>
-            <ul>
-                <li><a href="mailto:gseichstaedt@gmail.com">Email</a></li>
-                <li><a href="tel:8159041038">Phone</a></li>
-                <li><a href="https://www.linkedin.com/in/grahameichstaedt/">LinkedIn</a></li>
-            </ul>
-            <form name="contact" method="POST" netlify>
-                <textarea name="textarea-message" placeholder="Write a message" cols="50"></textarea>
+            <form name="contact" method="POST" onsubmit="launchThankYouModal()" netlify>
+                <h2>Contact Me</h2>
+                <p>I'm thrilled you're interested in reaching out! Whether you have a question, project proposal, or just want to say hello, feel free to to get in touch using this form or any other method listed below:</p>
+                <ul>
+                    <li><i class="fa-regular fa-envelope"></i><a href="mailto:gseichstaedt@gmail.com">Email</a></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:8159041038">Phone</a></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/grahameichstaedt/">LinkedIn</a></li>
+                    <li><i class="fa-brands fa-github"></i><a href="https://github.com/GSEich98">GitHub</a></li>
+                </ul>
+                <textarea name="textarea-message" placeholder="Write a message" cols="50" required></textarea>
                 <input name="submit" type="submit" value="Submit">
             </form>
-        </div>
+        <dialog id="thank-you">
+            <h1>Thank you!</h1>
+            <p>I will get back to you as soon as I can. Thank you so much for visiting!</p>
+            <button type="button" onclick="dismiss()">Ok</button>
+        </dialog>
     </section>
+    <script src="scripts/util.js" async defer></script>
 </body>
 </html>
