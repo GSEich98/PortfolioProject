@@ -1,24 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|Space+Mono:regular,italic,700,700italic');
 
 :root {
     --cambridge-blue: rgb(156, 197, 161);
-    --african-violet: rgb(141, 128, 173); 
+    --african-violet: rgb(141, 128, 173);
     --caribbean-current: rgb(8, 96, 84);
-    --engineering-orange:rgb(184, 12, 9);
+    --engineering-orange: rgb(184, 12, 9);
     --raisin-black: rgb(52, 46, 55);
 }
 
 html,
 body {
     all: unset;
-    background-color: #342E37;
+    background: radial-gradient(farthest-corner, var(--caribbean-current), var(--raisin-black)) #342E37;    
+    /* background-color: #342E37;
     background-image: radial-gradient(
-        /* ellipsis at 50% 50%, */
         farthest-corner,
         var(--caribbean-current),
         var(--raisin-black)
-    );
+    ); */
     box-sizing: border-box;
     color: var(--cambridge-blue);
     font-family: 'Space Mono', Arial, Helvetica, sans-serif;
@@ -27,14 +26,7 @@ body {
 }
 
 nav {
-    /* background-color: var(--african-violet); */
-    /* border: 1px solid var(--engineering-orange);
-    border-radius: 2px; */
-    background-image: linear-gradient(
-        210deg, 
-        black,
-        var(--raisin-black)
-    );
+    background-image: linear-gradient(210deg, black, var(--raisin-black));
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -43,6 +35,7 @@ nav {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     font-family: 'Space Mono', monospace;
     justify-content: space-evenly;
     list-style: none;
@@ -56,7 +49,7 @@ nav a {
 
 /* TODO The transition below is currently applying beneath the navbar, instead of beneath each anchor */
 
-nav a::before {
+nav li span::before {
     color: var(--cambridge-blue);
     content: '';
     position: absolute;
@@ -71,13 +64,14 @@ nav a::before {
     transition: transform 300ms ease-in-out;
 }
 
-nav a:hover::before {
+nav span:hover::before {
     transform-origin: center;
     transform: scaleX(1);
 }
 
 @media screen and (max-width:600px) {
     nav {
+        position: static;
         width: 100%;
     }
 
@@ -88,6 +82,7 @@ nav a:hover::before {
     nav li {
         text-align: center;
     }
+
 }
 
 
@@ -115,21 +110,14 @@ nav a:hover::before {
     text-align: center;
 }
 
-/* #header-container {
-    border: 1px solid var(--cambridge-blue);
-    box-shadow: 2px 2px 10px --cambridge-blue;
-} */
-
 h1 {
     color: var(--engineering-orange);
-    text-shadow: 0px 0px 5px var(--raisin-black, black);
 }
 
 h2 {
     color: var(--engineering-orange);
     font-size: 2rem;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 5px var(--engineering-orange, black);
 }
 
 #h1-left {
@@ -151,7 +139,6 @@ h2 {
     font-family: 'Space Mono', monospace;
     position: relative;
     top: 25%;
-    text-shadow: 0px 0px 5px black;
 }
 
 /* Animations for Header Element */
@@ -196,11 +183,9 @@ h2 {
 @keyframes h1-left {
     0% {
         transform: translateY(200%);
-        /* text-shadow: 10px 10px -10px var(--african-violet); */
     }
     100% {
         transform: translate(0);
-        /* text-shadow: 0px 0px 10px var(--african-violet); */
     }
 }
 
@@ -228,7 +213,6 @@ h2 {
 @keyframes h1-right {
     0% {
         transform: translateY(-200%);
-        text-shadow: 10px 10px -10px var(--african-violet);
     }
     100% {
         transform: translate(0);
@@ -243,127 +227,22 @@ h2 {
     animation-timing-function: ease-out;
 }
 
+/* TODO FIXME IAState background image is messing up the gradient*/
 #education {
     background-image: url(../images/Iowa_State_Cyclones_logo.svg.png);
-    background-repeat: no-repeat;
-    background-size: 35%;
-    background-position: 50% 70%;
+    background-repeat: no-repeat, repeat;
+    background-size: 35%, 100%;
+    background-position: 50% 70%, 0% 0%;
 }
 
-#skills {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
 
-/* #skills h2 {
-    text-align: center;
-} */
-
-#skills ul {
-    list-style-type: none;
-    max-width: 40%;
-    padding: 0;
-}
-
-#skills li {
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-}
-
-#skills-lists {
-    display: flex;
-    font-size: 1.5em;
-    justify-content: space-around;
-}
 
 section {
     color: white;
     min-height: 100vh;
-    padding-block: 10rem;
+    /* padding-block: 10rem; */
+    margin-inline: 1em;
     padding-inline: 1rem;
-}
-
-/* Contact Styling */
-
-#contact-area {
-    border: 2px solid var(--african-violet);
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px var(--engineering-orange), -2px -2px 5px var(--engineering-orange);
-}
-
-form {
-    border-radius: 2px;
-    padding: 2%;
-}
-
-input, textarea {
-    border: 1px solid gray;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-variant: small-caps;
-    margin: 1%;
-    padding: 1%;
-    width: 100%;
-}
-
-textarea {
-    height: 20vh;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-input:focus, textarea:focus {
-    box-shadow: -2px 2px 5px var(--african-violet), 2px -2px 5px var(--african-violet), -2px -2px 5px var(--african-violet), 2px 2px 5px var(--african-violet);
-}
-
-#contact-area {
-    padding: 1rem;
-}
-
-
-#contact {
-    color: var(--raisin-black);
-}
-
-#contact p {
-    text-align: left;
-}
-
-#contact ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#contact li {
-    padding: 0;
-    margin: 0;
-}
-
-#contact a:visited, #contact a:link, #contact i {
-    color: white
-}
-
-#contact ul a {
-    text-decoration: none;
-}
-
-dialog {
-    background-image: linear-gradient(
-        45deg,
-        rgb(52, 46, 55),
-        rgb(8, 96, 84)
-    );
-    border: none;
-    border-radius: 20px;
-    box-shadow: 1px 1px 3px var(--cambridge-blue), -1px -1px 3px var(--cambridge-blue);
-    color: var(--cambridge-blue);
-}
-
-dialog h1 {
-    text-align: center;
 }
 
 i {
@@ -372,37 +251,16 @@ i {
 }
 
 section {
-    margin-block: 1em;
-}
-
-section:nth-child(even) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-image: linear-gradient(
-        135deg,
-        var(--african-violet),
-        var(--caribbean-current)
-    );
-    border: none;
-    border-radius: 20px;
-    box-shadow: 2px 2px 5px rgba(156, 197, 161, .1), -2px -2px 5px rgba(156, 197, 161, .1);
-
-}
-
-section:nth-child(even) h2 {
-    font-variant: small-caps;
-    text-align: left;
-}
-
-section:nth-child(odd) {
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
     border: none;
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgba(141, 128, 173, .1), -2px -2px 5px rgba(141, 128, 173, .1);
+    background-image: linear-gradient(135deg, var(--caribbean-current), var(--african-violet));
+    margin-block: 1em;
 }
 
-section:nth-child(odd) h2 {
+section h2 {
     font-variant: small-caps;
-    text-align: right;
+    text-align: center;
 }
