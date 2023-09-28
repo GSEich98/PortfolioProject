@@ -12,14 +12,8 @@ html,
 body {
     all: unset;
     background: radial-gradient(farthest-corner, var(--caribbean-current), var(--raisin-black)) #342E37;    
-    /* background-color: #342E37;
-    background-image: radial-gradient(
-        farthest-corner,
-        var(--caribbean-current),
-        var(--raisin-black)
-    ); */
     box-sizing: border-box;
-    color: var(--cambridge-blue);
+    color: white;
     font-family: 'Space Mono', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     line-height: 1.5;
@@ -99,7 +93,6 @@ nav span:hover::before {
 /* Header Styling */
 
 #header-container {
-    /* background-color: var(--raisin-black); */
     background-image: url("../images/GOLD4165.jpg");
     background-size: 50%;
     background-repeat: no-repeat;
@@ -114,10 +107,11 @@ h1 {
     color: var(--engineering-orange);
 }
 
-h2 {
+h1 {
     color: var(--engineering-orange);
     font-size: 2rem;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 #h1-left {
@@ -240,7 +234,6 @@ h2 {
 section {
     color: white;
     min-height: 100vh;
-    /* padding-block: 10rem; */
     margin-inline: 1em;
     padding-inline: 1rem;
 }
@@ -260,7 +253,7 @@ section {
     margin-block: 1em;
 }
 
-section h2 {
+section h1 {
     font-variant: small-caps;
     text-align: center;
 }

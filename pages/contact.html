@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GSEich.dev | Contact</title>
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/contact.css">
-    <link rel="icon" href="../images/android-chrome-192x192.png">
-    <link rel="icon" href="../images/android-chrome-512x512.png">
-    <link rel="icon" href="../images/apple-touch-icon.png">
-    <link rel="icon" href="../images/favicon-32x32.png">
-    <link rel="icon" href="../images/favicon.ico">
-    <script src="https://kit.fontawesome.com/b27b18b9da.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav>
-        <!-- Navbar -->
-        <!-- Add one of each section to navbar -->
-        <div id="nav-left">
-            <span id="navbar-title">GSEich.dev</span>
-            <!-- TODO Create JS event handler to gray out other links when the user hovers over a link. -->
-            <ul>
-                <li>
-                    <a href="../index.html">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html">
-                        <span>About</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="education.html">
-                        <span>Education</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="experience.html">
-                        <span>Experience</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="skills.html">
-                        <span>Skills</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.html">
-                        <span>Projects</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <section id="contact">
-        <form name="contact" method="POST" onsubmit="launchThankYouModal()" netlify>
-            <h2>Contact Me</h2>
-            <p>I'm thrilled you're interested in reaching out! Whether you have a question, project proposal, or just want to say hello, feel free to to get in touch using this form or any other method listed below:</p>
-            <ul>
-                <li><i class="fa-regular fa-envelope"></i><a href="mailto:gseichstaedt@gmail.com">Email</a></li>
-                <li><i class="fa-solid fa-phone"></i><a href="tel:8159041038">Phone</a></li>
-                <li><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/grahameichstaedt/">LinkedIn</a></li>
-                <li><i class="fa-brands fa-github"></i><a href="https://github.com/GSEich98">GitHub</a></li>
-            </ul>
-            <textarea name="textarea-message" placeholder="Write a message" cols="50" required></textarea>
-            <input name="submit" type="submit" value="Submit">
-        </form>
-    <dialog id="thank-you">
-        <h1>Thank you!</h1>
-        <p>I will get back to you as soon as I can. Thank you so much for visiting!</p>
-        <button type="button" onclick="dismiss()">Ok</button>
-    </dialog>
-</section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GSEich.dev | Contact</title>
+        <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="../styles/contact.css">
+        <link rel="icon" href="../images/android-chrome-192x192.png">
+        <link rel="icon" href="../images/android-chrome-512x512.png">
+        <link rel="icon" href="../images/apple-touch-icon.png">
+        <link rel="icon" href="../images/favicon-32x32.png">
+        <link rel="icon" href="../images/favicon.ico">
+        <script src="https://kit.fontawesome.com/b27b18b9da.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <!-- Navbar -->
+            <!-- Add one of each section to navbar -->
+            <div id="nav-left">
+                <span id="navbar-title">GSEich.dev</span>
+                <!-- TODO Create JS event handler to gray out other links when the user hovers over a link. -->
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="education.html">
+                            <span>Education</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="experience.html">
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="skills.html">
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="contact">
+            <form name="contact" method="POST" onsubmit="launchThankYouModal()" netlify>
+                <h1>Contact Me</h1>
+                <p>I'm thrilled you're interested in reaching out! Whether you have a question, project proposal, or just want to say hello, feel free to to get in touch using this form or any other method listed below:</p>
+                <ul>
+                    <li><i class="fa-regular fa-envelope"></i><a href="mailto:gseichstaedt@gmail.com">Email</a></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:8159041038">Phone</a></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/grahameichstaedt/">LinkedIn</a></li>
+                    <li><i class="fa-brands fa-github"></i><a href="https://github.com/GSEich98">GitHub</a></li>
+                </ul>
+                <textarea name="textarea-message" placeholder="Write a message" cols="50" required></textarea>
+                <input name="submit" type="submit" value="Submit">
+            </form>
+        <dialog id="thank-you">
+            <h1>Thank you!</h1>
+            <p>I will get back to you as soon as I can. Thank you so much for visiting!</p>
+            <button type="button" onclick="dismiss()">Ok</button>
+        </dialog>
+    </section>
+    <script src="../scripts/util.js" async defer></script>
 </body>
 </html>

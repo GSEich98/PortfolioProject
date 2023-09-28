@@ -1,0 +1,52 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.flex-item {
+    flex-basis: 20%;
+    min-height: 150px;
+}
+
+.flex-item img {
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    margin-inline: auto;
+}
+
+.flex-link:link, .flex-link:visited {
+    /* ! The next 2 styles might be overkill and impact performance */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* TODO Make decision of whether to keep */
+
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+    color: white;
+    flex-basis: 200px;
+    padding: 1em;
+    text-decoration: none;
+    transition-property: opacity, background-color, box-shadow, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.flex-link:hover {
+    background-color: var(--african-violet);
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, .5), -5px -5px 20px rgba(255, 255, 255, .5);
+    color: red;
+    opacity: .75;
+}
+
+
+figcaption {
+    margin-block: 1em;
+    word-break:keep-all;
+}
+
