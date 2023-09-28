@@ -106,13 +106,9 @@ nav span:hover::before {
 
 h1 {
     color: var(--engineering-orange);
-}
-
-h1 {
-    color: var(--engineering-orange);
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 #h1-left {
@@ -255,6 +251,7 @@ section {
 }
 
 section h1 {
+    color: var(--cambridge-blue);
     font-variant: small-caps;
     text-align: center;
 }
