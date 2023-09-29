@@ -42,24 +42,30 @@ nav a {
     /* transition: border-bottom 500ms ease-in-out; */
 }
 
-/* TODO The transition below is currently applying beneath the navbar, instead of beneath each anchor */
+nav li a {
+    position: relative;
+    color: var(--cambridge-blue);
+    text-decoration: none;
+    overflow: hidden;
+}
 
-nav li span::before {
+nav li a::before {
     color: var(--cambridge-blue);
     content: '';
     position: absolute;
     width: 100%;
-    height: 5px;
+    height: 2px;
     border-radius: 5px;
     background-color: var(--engineering-orange);
     bottom: 0;
     left: 0;
-    transform-origin:bottom;
+    transform-origin:bottom left;
     transform: scaleX(0);
-    transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, width 300ms ease-in-out;
 }
 
-nav span:hover::before {
+nav a:hover::before {
+    width: 100%;
     transform-origin: center;
     transform: scaleX(1);
 }
@@ -78,6 +84,28 @@ nav span:hover::before {
         text-align: center;
     }
 
+    h2 {
+        font-size: 1rem;
+    }
+
+    #h2-left {
+        position: absolute;
+        left: 0px !important;
+    }
+
+    #h2-right {
+        position: absolute;
+        right: 0px !important;
+    }
+
+    #hero {
+        min-height: 200px;
+        min-width: 200px;
+        position: relative;
+        top: 1em;
+        z-index: -50;
+    }
+
 }
 
 
@@ -94,20 +122,16 @@ nav span:hover::before {
 /* Header Styling */
 
 #header-container {
-    /* background-image: url("../images/GOLD4165.jpg"); */
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 50% 25%;
-    background-origin: content-box;
-    font-size: 1.5rem;
-    padding: 5rem;
-    text-align: center;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
 }
 
 #hero {
-    background-image: url("../images/GOLD4165-small.jpg");
-    min-width: 1vw;
-    min-height: 1vh;
+    border-radius: 50%;
+    max-height: 10%;
+    max-width: 25%;
 }
 
 h1 {
@@ -115,31 +139,28 @@ h1 {
     font-size: 3rem;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 500;
+    text-align: center;
 }
 
-/* p {
-    font-weight: 100;
-} */
-
-#h1-left {
+#h2-left, #h2-right {
+    color: var(--african-violet);
     display: inline-block;
-    position: relative;
-    right: 25%;
+    font-size: 3rem;
+    position: absolute;
+}
+
+#h2-left {
+    left: 4em;
     writing-mode: sideways-lr;
 }
 
-#h1-right {
-    display: inline-block;
-    position: relative;
-    left: 25%;
-    writing-mode: vertical-lr;
+#h2-right {
+    right: 4em;
+    writing-mode: sideways-rl;
 }
 
-#h2-top {
-    color: var(--cambridge-blue);
-    font-family: 'Space Mono', monospace;
-    position: relative;
-    top: 25%;
+p {
+    font-weight: 100;
 }
 
 /* Animations for Header Element */
@@ -190,50 +211,11 @@ h1 {
     }
 }
 
-@keyframes circle-in-center {
-    from {
-      clip-path: circle(0%);
-    }
-    to {
-      clip-path: circle(125%);
-    }
-  }
-  
-  [transition-style="in:circle:center"] {
-    animation: 2.5s /* cubic-bezier(.25, 1, .30, 1) */ ease circle-in-center both;
-  }
-
-#h1-left {
-    animation-name: h1-left;
-    animation-duration: 1500ms;
-    animation-delay: 100ms;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-}
-
-@keyframes h1-right {
-    0% {
-        transform: translateY(-200%);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
-
-#h1-right {
-    animation-name: h1-right;
-    animation-duration: 1500ms;
-    animation-delay: 300ms;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-}
-
 section {
     color: white;
     font-size: 2rem;
     min-height: 75vh;
     margin-inline: 1em;
-    /* padding-inline: 1rem; */
     padding-inline: 2em;
 }
 
@@ -245,6 +227,7 @@ i {
 
 section {
     -webkit-backdrop-filter: blur(1px);
+    -moz-backdrop-filter:blur(1px);
     backdrop-filter: blur(1px);
     border: none;
     border-radius: 20px;
@@ -259,3 +242,4 @@ section h1 {
     font-variant: small-caps;
     text-align: center;
 }
+

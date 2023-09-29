@@ -5,21 +5,13 @@ section {
 
 section p {
     animation-name: fade-in;
-    animation-duration: 1500ms;
+    animation-duration: 750ms;
     animation-timing-function: linear;
 }
 
 @keyframes fade-in {
     0% {
         opacity: 0;
-    }
-
-    33% {
-        color: var(--raisin-black);
-    }
-
-    66% {
-        color: var(--engineering-orange);
     }
 
     100% {
