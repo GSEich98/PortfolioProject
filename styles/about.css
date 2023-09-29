@@ -29,7 +29,9 @@ section p {
 
 #link-container {
     display: flex;
+    align-items: flex-end;
     justify-content: center;
+    padding-block: 2em;
 }
 
 #resume {

@@ -1,0 +1,9 @@
+/* TODO FIXME IAState background image is messing up the gradient*/
+#education {
+    background-image: url(../images/Iowa_State_Cyclones_logo.svg.png);
+    background-repeat: no-repeat, repeat;
+    background-size: 30%, 100%;
+    background-position: 50% 85%, 100% 0%;
+    text-align: center;
+}
+

@@ -228,16 +228,6 @@ h1 {
     animation-timing-function: ease-out;
 }
 
-/* TODO FIXME IAState background image is messing up the gradient*/
-#education {
-    background-image: url(../images/Iowa_State_Cyclones_logo.svg.png);
-    background-repeat: no-repeat, repeat;
-    background-size: 35%, 100%;
-    background-position: 50% 70%, 0% 0%;
-}
-
-
-
 section {
     color: white;
     font-size: 2rem;
