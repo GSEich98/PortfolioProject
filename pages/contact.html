@@ -60,24 +60,26 @@
             </div>
         </nav>
         <section id="contact">
-            <form name="contact" method="POST" onsubmit="launchThankYouModal()" netlify>
+            <div class="form-container">
                 <h1>Contact Me</h1>
                 <p>I'm thrilled you're interested in reaching out! Whether you have a question, project proposal, or just want to say hello, feel free to to get in touch using this form or any other method listed below:</p>
-                <textarea name="textarea-message" placeholder="Write a message" cols="50" required></textarea>
-                <input name="submit" type="submit" value="Submit">
-            </form>
-            <ul>
-                <li><a href="mailto:gseichstaedt@gmail.com"><i class="fa-regular fa-envelope"></i>Email</a></li>
-                <li><a href="tel:8159041038"><i class="fa-solid fa-phone"></i>Phone</a></li>
-                <li><a href="https://www.linkedin.com/in/grahameichstaedt/"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a></li>
-                <li><a href="https://github.com/GSEich98"><i class="fa-brands fa-github"></i>GitHub</a></li>
-            </ul>
-        <dialog id="thank-you">
-            <h1>Thank you!</h1>
-            <p>I will get back to you as soon as I can. Thank you so much for visiting!</p>
-            <button type="button" onclick="dismiss()">Ok</button>
-        </dialog>
+                <form name="contact" method="POST" onsubmit="launchThankYouModal()" netlify>
+                    <textarea name="textarea-message" placeholder="Write a message" cols="50" required></textarea>
+                    <input name="submit" type="submit" value="Submit">
+                </form>
+                <ul>
+                    <li><a href="mailto:gseichstaedt@gmail.com"><i class="fa-regular fa-envelope"></i>Email</a></li>
+                    <li><a href="tel:8159041038"><i class="fa-solid fa-phone"></i>Phone</a></li>
+                    <li><a href="https://www.linkedin.com/in/grahameichstaedt/"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a></li>
+                    <li><a href="https://github.com/GSEich98"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                </ul>    
+            </div>
     </section>
+    <dialog id="thank-you">
+        <h1>Thank you!</h1>
+        <p>I will get back to you as soon as I can. Thank you so much for visiting!</p>
+        <button type="button" onclick="dismiss()">Ok</button>
+    </dialog>
     <script src="../scripts/util.js" async defer></script>
 </body>
 </html>
