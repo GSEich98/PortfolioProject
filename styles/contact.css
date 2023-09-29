@@ -40,7 +40,9 @@ input:focus, textarea:focus {
 }
 
 #contact ul {
+    display: flex;
     list-style: none;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
@@ -68,8 +70,13 @@ dialog {
     border-radius: 20px;
     box-shadow: 1px 1px 3px var(--cambridge-blue), -1px -1px 3px var(--cambridge-blue);
     color: var(--cambridge-blue);
+    min-height: 60vh;
 }
 
 dialog h1 {
     text-align: center;
+}
+
+i {
+    margin-inline: 1em;
 }

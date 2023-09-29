@@ -1,0 +1,45 @@
+section {
+    font-size: 2rem;
+    text-align: justify;
+}
+
+section p {
+    animation-name: fade-in;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        color: var(--raisin-black);
+    }
+
+    66% {
+        color: var(--engineering-orange);
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#link-container {
+    display: flex;
+    justify-content: center;
+}
+
+#resume {
+    color: var(--cambridge-blue);
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 250ms;
+}
+
+#resume:hover {
+    color: var(--engineering-orange);
+    text-decoration: underline;
+}

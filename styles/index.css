@@ -94,7 +94,7 @@ nav span:hover::before {
 /* Header Styling */
 
 #header-container {
-    background-image: url("../images/GOLD4165.jpg");
+    /* background-image: url("../images/GOLD4165.jpg"); */
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 50% 25%;
@@ -104,12 +104,22 @@ nav span:hover::before {
     text-align: center;
 }
 
+#hero {
+    background-image: url("../images/GOLD4165-small.jpg");
+    min-width: 1vw;
+    min-height: 1vh;
+}
+
 h1 {
-    color: var(--engineering-orange);
+    color: var(--cambridge-blue);
     font-size: 3rem;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
+
+/* p {
+    font-weight: 100;
+} */
 
 #h1-left {
     display: inline-block;
@@ -230,13 +240,16 @@ h1 {
 
 section {
     color: white;
-    min-height: 100vh;
+    font-size: 2rem;
+    min-height: 75vh;
     margin-inline: 1em;
-    padding-inline: 1rem;
+    /* padding-inline: 1rem; */
+    padding-inline: 2em;
 }
 
 i {
     color: black;
+    font-size: 2rem;
     margin-right: 2em;
 }
 
@@ -251,7 +264,8 @@ section {
 }
 
 section h1 {
-    color: var(--cambridge-blue);
+    /* color: var(--cambridge-blue); */
+    margin: 0;
     font-variant: small-caps;
     text-align: center;
 }
